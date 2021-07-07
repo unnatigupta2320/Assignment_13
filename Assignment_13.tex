@@ -146,15 +146,24 @@ https://github.com/unnatigupta2320/Assignment_13
 An unbiased dice is thrown twice. Let the event A be 'odd number on the first throw' and B be 'Odd number on second throw'. Check the independence of event A and B. 
 \section{Solution}
 \begin{lemma}
-Two events are independent if knowing one event occurred doesn't change the probability of the other event.
-\\
-$\therefore$ A and B are said to be independent if and only if:-
+If A and B are independent events then the property can be expressed as \label{L1}
 \begin{align}
-\pr{AB}=\pr{A}\pr{B}   
-\end{align}
-\label{lemma1}
+  \pr{A|B}=\pr{A}.   
+\end{align} 
 \end{lemma} 
 \begin{enumerate}
+\item According to question,the events are:-
+\begin{table}[ht!]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Events} & \textbf{Description}                         \\ \hline
+$A$ & Odd number on first throw
+\\ \hline
+$B$ & Odd number on second throw 
+\\ \hline
+$AB$ & Odd Numbers appears on both throws \\ \hline
+\end{tabular}
+\end{table}
 \item Let $X_0$ and $X_1$ be the random variables representing the numbers we get  when a dice is thrown for first and second time respectively.
 \begin{align}
     X_0\epsilon\{1,2,3,4,5,6\}
@@ -168,78 +177,20 @@ $\therefore$ A and B are said to be independent if and only if:-
 	0 & otherwise
 	\end{cases}
 \end{align}
-\item According to question,the events are:-
-\begin{table}[ht!]
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Events} & \textbf{Description}                         \\ \hline
-$A$ & Odd number on first throw
-\\ \hline
-$B$ & Odd number on second throw 
-\\ \hline
-$AB$ & Odd Numbers appears on both throws \\ \hline
-\end{tabular}
-\end{table}
-\item For the event \textbf{A}:-
-\begin{itemize}
-    \item The probability of odd number on first throw is-
-    \begin{align}
-        \pr{A}=\sum_{i=1,3,5} \pr{X_0=i}
-    \end{align}
-    \item So,
-\begin{multline}
-    \pr{A}=
-    \\\pr{X_0=1}+\pr{X_0=3}+\pr{X_0=5}
-\end{multline}
+\item From the above information we have,
 \begin{align}
-\implies\pr{A}&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}
+ \pr{A}&=\sum_{i=1,3,5} \pr{X_0=i}= \frac{1}{2}
+ \\
+ \pr{B}&=\sum_{i=1,3,5} \pr{X_1=i}= \frac{1}{2}
 \\
-\implies  \pr{A} &= \frac{3}{6} 
-\\
-\implies \pr{A}  &= \frac{1}{2} \label{eqA}
- \end{align}
- \end{itemize}
- \item For the event \textbf{B}:-
-    \begin{itemize}
-    \item The probability of odd number on second throw is-
-    \begin{align}
-        \pr{B}=\sum_{i=1,3,5} \pr{X_1=i}
-    \end{align}
-    \item So,
-    \begin{multline}
-    \pr{B}=
-    \\\pr{X_1=1}+\pr{X_1=3}+\pr{X_1=5}
-\end{multline}
-\begin{align}
-\implies \pr{B}&=\frac{1}{6}+\frac{1}{6}+\frac{1}{6}
-\\
-\implies  \pr{B} &= \frac{3}{6} 
-\\
-\implies  \pr{B}&= \frac{1}{2} \label{eqB}
- \end{align}
- \end{itemize}
-\item For the event \textbf{AB}:-
-\begin{itemize}
-    \item The probability that odd numbers appears on both throw is-
-    \begin{align}
-  \pr{AB} &= \pr{A|B}\pr{B}\\
-   \implies  \pr{AB}  &= \frac{1}{2}\times\frac{1}{2}
-   \\
-   \implies  \pr{AB} &=\frac{1}{4} \label{eqC}
- \end{align}
- \end{itemize}
-\item Now to check whether the events are \textbf{independent}, we use Lemma \eqref{lemma1}.
-\begin{align}
- \implies   \pr{AB}= \pr{A}\pr{B}
-    \end{align}
-    \item Putting values from \eqref{eqA} and \eqref{eqB} we get,
-    \begin{align}
-  \implies  \pr{AB} & = \frac{1}{2}\times\frac{1}{2}
-    \\
-\implies    \pr{AB}&= \frac{1}{4}
+    \pr{AB} &= \frac{1}{4}
 \end{align}
-This is equal to value in equation \eqref{eqC}.
-\\
-Hence, the events are \textbf{independent}.
+\item Now to check whether the events are independent we use Lemma \ref{L1}
+\begin{align}
+   \pr{A|B} &= \frac{\pr{AB}}{\pr{B}} \\
+   &= \frac{1}{2} \\ 
+   &= \pr{A}
+\end{align}
+\item Thus $\pr{A|B}=\pr{A}$ which implies the  events are \textbf{independent}.
 \end{enumerate}
 \end{document}
