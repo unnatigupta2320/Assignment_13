@@ -221,15 +221,11 @@ $AB$ & Odd Numbers appears on both throws \\ \hline
 \item For the event \textbf{AB}:-
 \begin{itemize}
     \item The probability that odd numbers appears on both throw is-
-    \begin{multline}
-    \implies  \pr{AB}=\\\sum_{i=1,3,5}\brak{\pr{X_0=i}}\sum_{i=1,3,5}\brak{\pr{X_1=i}} 
-    \end{multline} 
-\begin{align}
-\implies  \pr{AB} &= \brak{\frac{3}{6}}\brak{ \frac{3}{6} }
-\\
-\implies  \pr{AB} &=\frac{9}{36}
-\\
- \implies\pr{AB} &=\frac{1}{4} \label{eqC}
+    \begin{align}
+  \pr{AB} &= \pr{A|B}\pr{B}\\
+   \implies  \pr{AB}  &= \frac{1}{2}\times\frac{1}{2}
+   \\
+   \implies  \pr{AB} &=\frac{1}{4} \label{eqC}
  \end{align}
  \end{itemize}
 \item Now to check whether the events are \textbf{independent}, we use Lemma \eqref{lemma1}.
